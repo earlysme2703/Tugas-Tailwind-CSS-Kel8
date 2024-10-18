@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Admin Early</title>
+    <link href="../src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar full -->
+        <aside class="w-64 bg-gray-800 text-white flex-shrink-0">
+            <div class="p-4 border-b border-gray-700">
+                <h1 class="text-xl font-semibold">Sidebar Admin</h1>
+            </div>
+            <!-- Searchbar -->
+            <div class="p-4">
+              <div class="relative">
+                <input type="text" class="w-full bg-gray-700 text-white rounded p-2 pl-8" placeholder="Search...">
+                <i class="fas fa-search absolute left-2 top-3 text-gray-400"></i>
+            </div>
+            
+            </div>
+            <!-- Sidebar -->
+            <nav class="mt-4">
+                <a href="#" class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-bars w-5 h-5 mr-2"></i>
+                    <span class="align-middle">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-2 bg-gray-700 text-white">
+                    <i class="fas fa-folder w-5 h-5 mr-2"></i>
+                    <span class="align-middle">Pages</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- kotak paling atas -->
+        <main class="flex-1 overflow-auto px-6">
+            <nav class="bg-white shadow px-6 py-3 flex justify-between items-center">
+              <button class="text-gray-600">
+                  <i class="fas fa-bars fa-lg"></i> 
+              </button>
+              <div class="flex items-center">
+                  <i class="fas fa-user-circle fa-2x text-gray-600 mr-2"></i> 
+                  <span>Administrator</span>
+              </div>
+          </nav>
+          
+          
+
+            <!-- tulisan pagelistS -->
+            <div class="flex justify-between items-center mb-4 mt-4">
+              <h1 class="text-2xl font-semibold">Page List</h1>
+              <nav class="flex mb-0" aria-label="Breadcrumb">
+                  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                      <li class="inline-flex items-center">
+                          <i class="fas fa-home text-gray-700"></i> 
+                          <span class="ml-1 text-gray-700">Home</span>
+                          <span class="mx-3 text-gray-500">/</span> 
+                      </li>
+                      <li class="flex items-center">
+                          <span class="text-gray-500">Pages</span>
+                      </li>
+                  </ol>
+              </nav>
+          </div>
+          
+          <!-- kotak main -->
+          <div class="bg-white p-3 rounded-lg shadow mb-4 mx-auto">
+            <div class="flex items-center gap-2 mb-1">
+                <button class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center">
+                    <i class="fas fa-plus mr-2"></i>
+                    New
+                </button>
+                
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                    Filter
+                </button>
+                
+                <button class="bg-red-500 text-white px-4 py-2 rounded-lg">
+                    Report
+                </button>
+                
+                <div class="ml-auto flex items-center">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center mr-2">
+                        <i class="fas fa-download text-white mr-2"></i> 
+                        Export
+                    </button>
+        
+                    <button class="bg-blue-500 text-white p-3 rounded-lg flex items-center">
+                        <i class="fas fa-calendar-alt text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+                <!-- ini tabelnyooo -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <input type="checkbox" class="rounded">
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    ID
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Title
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Date
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Tags
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Star
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Created at
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Updated at
+                                </th>
+                                <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                  Action
+                              </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <input type="checkbox" class="rounded">
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">1</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Homepage</td>
+                                <td class="px-6 py-4 whitespace-nowrap">2022-06-25</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        new
+                                    </span>
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                                        special
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                  <a href="#" class="text-gray-500 hover:text-yellow-300"><i class="fas fa-star"></i></a>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">2022-06-01</td>
+                                <td class="px-6 py-4 whitespace-nowrap">2022-06-23</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center">
+                                  <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fas fa-pen"></i></a>
+                                  <a href="#" class="text-gray-500 hover:text-gray-700 mx-2"><i class="fas fa-eye"></i></a>
+                                  <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fas fa-trash-alt"></i></a>
+                                  <a href="#" class="text-gray-500 hover:text-gray-700 mx-2"><i class="fas fa-flask"></i></a>
+                              </td>
+                            </tr>
+                            <!-- buat nambar baris brooo... -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- footbar meureun... -->
+                <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 mt-4 rounded-lg shadow">
+                  <div class="flex items-center text-sm text-gray-700">
+                      <span>Showing</span>
+                      <span class="font-medium mx-1">1</span>
+                      <span>to</span>
+                      <span class="font-medium mx-1">6</span>
+                      <span>of</span>
+                      <span class="font-medium mx-1">6</span>
+                      <span>entries</span>
+                  </div>
+    
+                  <div class="flex items-center space-x-2">
+                      <div class="flex items-center space-x-2">
+                          <span class="text-sm text-gray-700">Show</span>
+                          <select class="form-select rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                              <option>20</option>
+                              <option>50</option>
+                              <option>100</option>
+                          </select>
+                          <span class="text-sm text-gray-700">entries</span>
+                      </div>
+    
+                      <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Previous</span>
+                            <i class="fas fa-chevron-left"></i> 
+                        </a>
+                        <a href="#" aria-current="page" class="z-10 bg-blue-50 border-blue-500 text-blue-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            1
+                        </a>
+                        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Next</span>
+                            <i class="fas fa-chevron-right"></i> 
+                        </a>
+                    </nav>
+                    
+                  </div>
+              </div>
+            </div>  
+        </main>
+    </div>
+</body>
+
+</html>
