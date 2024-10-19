@@ -4,5 +4,10 @@
   },
   "dependencies": {
     "flowbite": "^2.5.2"
+  },
+  "scripts": {
+    "build": "tailwindcss build src/input.css -o src/output.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   }
 }
+
